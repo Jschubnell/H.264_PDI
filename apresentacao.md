@@ -83,7 +83,7 @@ A DST se ajusta melhor a frequências mais altas e por isso é preferível para 
  
 # Comparação VP9/AVC/HEVC
 
-<img src="/Users/jsch/Desktop/ApresentacaoPDI/pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
+<img src="/pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
 
 * Podemos ver uma melhora significativa entre o x254(AVC) e o x265(HEVC)
 
