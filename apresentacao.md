@@ -5,8 +5,24 @@
 * Basicamente o HEVC irá funcionar como outros codificadores de vídeo.
 * As principais mudanças que fizeram com que o HEVC se torna-se um ótimo codificador serão destacadas em nossa apresentação.
 
+---
 
-# Picture Partition
+# Principais diferenças
+
+* Motion Compensated Prediction 16×16→64×6.
+
+* Predição de blocos de tamanhos distintos, tendo blocos de tamanho residual até 32×32.
+
+* Motion Vector 9→35 intra-picture directions.
+
+* Adaptive Motion Vector Prediction (data do bloco e seus vizinhos).
+
+* Sample Adaptive Offset (reduz artefatos nas bordas dos blocos).
+
+---
+
+
+# Partição
 
 ![Coding Tree Block](/pictures/partition.png "Coding Tree Block")
 
@@ -17,6 +33,16 @@
 Os limites do bloco foram ampliados tanto para o máximo quanto para o mínimo. Com limites maiores podemos 
 codificar sinais estacionários (com baixa frequência) de 
 forma mais eficiente, enquanto as subdivisões de até 4x4 melhor codificam sinais de mais alta frequência.
+
+---
+
+# Partição
+
+![Partição](/pictures/motion_vector2.jpg "Partição")
+
+# presenter notes
+
+Podemos notar que nas regiões de maior detalhamento, como na boca e nas orelhas, o codificador utilizou partições menores para melhor representar estas partes e com isso ganhar na predição com vertores de movimento.
 
 ---
 
@@ -57,7 +83,7 @@ A DST se ajusta melhor a frequências mais altas e por isso é preferível para 
  
 # Comparação VP9/AVC/HEVC
 
-<img src="/pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
+<img src="/Users/jsch/Desktop/ApresentacaoPDI/pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
 
 * Podemos ver uma melhora significativa entre o x254(AVC) e o x265(HEVC)
 
