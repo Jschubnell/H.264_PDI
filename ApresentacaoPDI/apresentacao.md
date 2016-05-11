@@ -1,6 +1,6 @@
 # Picture Partition
 
-![Coding Tree Block](/Users/jsch/Desktop/ApresentacaoPDI/pictures/partition.png "Coding Tree Block")
+![Coding Tree Block](pictures/partition.png "Coding Tree Block")
 
 * O H.265 ampliou limite do macrobloco de 16x16 para 64x64
 
@@ -21,7 +21,7 @@
 
 # Predição Intra
 
-![Intra Prediction](/Users/jsch/Desktop/ApresentacaoPDI/pictures/1345537925_6877.png "Intra Prediction")
+![Intra Prediction](pictures/1345537925_6877.png "Intra Prediction")
 
 * A predição intra foi atualizada de 9 modos no AVC para 35 modos no HEVC.
 
