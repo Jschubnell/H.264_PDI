@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>H.265 - Codificação Aritmética Adaptativa</title>
+    <title>H265/HEVC</title>
     <!-- Styles -->
     
     <link rel="stylesheet" media="print" href="theme/css/print.css">
@@ -56,12 +56,12 @@
     </div>
     <div class="slides">
       
-      <!-- slide source: README.md -->
+      <!-- slide source: apresentacao.md -->
       <div class="slide-wrapper">
         <div class="slide slide-1">
           <div class="inner">
             
-            <header><h1 id="h265-codificacao-aritmetica-adaptativa">H.265 - Codificação Aritmética Adaptativa</h1></header>
+            <header><h1 id="h265hevc">H265/HEVC</h1></header>
             
             
           </div>
@@ -74,38 +74,29 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="README.md">README.md</a>
+              Source: <a href="apresentacao.md">apresentacao.md</a>
             </aside>
             
             <aside class="page_number">
-              1/5
+              1/9
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: README.md -->
+      <!-- slide source: apresentacao.md -->
       <div class="slide-wrapper">
         <div class="slide slide-2">
           <div class="inner">
             
-            <header><h1 id="codificacao-com-perda">Codificação com Perda</h1></header>
+            <header><h1 id="hevc">HEVC</h1></header>
             
             
-            <section><p><br><br><br><br></p>
-<p><img src='http://g.gravizo.com/g?
-  digraph G {
-    aize ="4,4";
-    "Transformada" [shape=box];
-    "Quantização" [shape=box];
-    "Condificação de Entropia" [shape=box];
-    "Transformada" -> "Quantização";
-    "Quantização" -&gt; "Condificação de Entropia";
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    "Transformada" -&gt; "Compactar a energia" [style=dotted] ;
-    "Quantização" -&gt; Qualidade [style=dotted];
-  }
-'/&gt;</p></section>
+            <section><p><img alt="HEVC" src="pictures/HEVC.png" title="HEVC" /></p>
+<ul>
+<li>Basicamente o HEVC irá funcionar como outros codificadores de vídeo.</li>
+<li>As principais mudanças que fizeram com que o HEVC se torna-se um ótimo codificador serão destacadas em nossa apresentação.</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -117,95 +108,33 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="README.md">README.md</a>
+              Source: <a href="apresentacao.md">apresentacao.md</a>
             </aside>
             
             <aside class="page_number">
-              2/5
+              2/9
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: README.md -->
+      <!-- slide source: apresentacao.md -->
       <div class="slide-wrapper">
         <div class="slide slide-3">
           <div class="inner">
             
-            <header><h1 id="motion-vector-h264">Motion Vector - H264</h1></header>
-            
-            
-            <section><p><img alt="Kiku" src="pictures/motion_vector1.jpg" />
-<a href="http://pt.slideshare.net/ashoknaik120/h-264-in-cuda-presentation">h-264 in cuda presentation</a></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="README.md">README.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/5
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: README.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-4">
-          <div class="inner">
-            
-            <header><h1 id="motion-vector-h265">Motion Vector - H265</h1></header>
-            
-            
-            <section><p><img alt="Kiku" src="pictures/motion_vector2.jpg" />
-<a href="http://www.cnet.com/news/what-is-hevc-high-efficiency-video-coding-h-265-and-4k-compression-explained/">cnet.com</a></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="README.md">README.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/5
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: README.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-5">
-          <div class="inner">
-            
-            <header><h1 id="diferencas">Diferenças</h1></header>
+            <header><h1 id="principais-diferencas">Principais diferenças</h1></header>
             
             
             <section><ul>
 <li>
-<p>Motion Compensated Prediction $16\times16 \rightarrow 64\times64$.</p>
+<p>Motion Compensated Prediction 16×16→64×64.</p>
 </li>
 <li>
-<p>Predição de blocos de tamanhos distintos, tendo blocos de tamanho residual até $32\times32$.</p>
+<p>Predição de blocos de tamanhos distintos, tendo blocos de tamanho residual até 32×32.</p>
 </li>
 <li>
-<p>Motion Vector $9 \rightarrow 35$ intra-picture directions.</p>
+<p>Motion Vector 9→35 intra-picture directions.</p>
 </li>
 <li>
 <p>Adaptive Motion Vector Prediction (data do bloco e seus vizinhos).</p>
@@ -225,11 +154,230 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="README.md">README.md</a>
+              Source: <a href="apresentacao.md">apresentacao.md</a>
             </aside>
             
             <aside class="page_number">
-              5/5
+              3/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1 id="particao">Partição</h1></header>
+            
+            
+            <section><p><img alt="Coding Tree Block" src="pictures/partition.png" title="Coding Tree Block" /></p>
+<ul>
+<li>O H.265 ampliou limite do macrobloco de 16x16 para 64x64</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>Os limites do bloco foram ampliados tanto para o máximo quanto para o mínimo. Com limites maiores podemos 
+codificar sinais estacionários (com baixa frequência) de 
+forma mais eficiente, enquanto as subdivisões de até 4x4 melhor codificam sinais de mais alta frequência.</p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1 id="particao_1">Partição</h1></header>
+            
+            
+            <section><p><img alt="Partição" src="pictures/motion_vector2.png" title="Partição" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>Podemos notar que nas regiões de maior detalhamento, como na boca e nas orelhas, o codificador utilizou partições menores para melhor representar estas partes e com isso ganhar na predição com vertores de movimento.</p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1 id="transformacao">Transformação</h1></header>
+            
+            
+            <section><ul>
+<li>Para a transformação de blocos pequenos foi visto que o uso de DST (Discrete Sine Transformation) tem um deesempenho superior ao DCT.</li>
+<li>A matriz <strong>H</strong> é a matriz de transformação utilizada para os blocos 4x4 </li>
+</ul>
+<!-- <img src="pictures/DST.png" width="30%"/> -->
+
+<p><br><br><br>
+$$M=
+  \begin{bmatrix}
+    39 &amp; 55 &amp; 74 &amp; 84 \newline
+    74 &amp; 74 &amp; 0 &amp; -74 \newline
+    84 &amp; -29 &amp; -74 &amp; 55 \newline
+    55 &amp; -84 &amp; 74 &amp; -29
+  \end{bmatrix}
+ $$</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>A DST se ajusta melhor a frequências mais altas e por isso é preferível para blocos 4x4 utilizados para regiões de maior detalhamento. O uso da DST não é muito mais exigente computacionalmente que a DCT nos blocos 4x4 e o uso da DST acarreta em uma melhora de 1% no bit rate da imagem.</p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h1 id="predicao-intra">Predição Intra</h1></header>
+            
+            
+            <section><p><img alt="Intra Prediction" src="pictures/13455379256877.png" title="Intra Prediction" /></p>
+<ul>
+<li>A predição intra foi atualizada de 9 modos no AVC para 35 modos no HEVC.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>Com o aumento no número de direções para as predições podemos predizer os pixels de forma mais eficiente</p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h1 id="predicao-inter">Predição Inter</h1></header>
+            
+            
+            <section><ul>
+<li>No HEVC temos um novo modo de predição - Advanced MV.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>O Advanced MV cria uma lista de candidatos para os vetores de movimento usando um modelo porbabilístico mais complexo. Após a criação da lista os melhores candidatos são indexados com o MV Delta, o vetor com a diferença entre o movimento verdadeiro e a predição.</p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: apresentacao.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h1 id="comparacao-vp9avchevc">Comparação VP9/AVC/HEVC</h1></header>
+            
+            
+            <section><p><img src="pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/></p>
+<ul>
+<li>Podemos ver uma melhora significativa entre o x254(AVC) e o x265(HEVC)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+              <p>A melhora no HEVC não foi presente somente nos vídeos de alta definição. Também podemos ver que vídeos com baixos bitrates também possuem uma grande melhora. </p>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="apresentacao.md">apresentacao.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/9
             </aside>
           </footer>
         </div>
@@ -244,32 +392,56 @@
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">H.265 - Codificação Aritmética Adaptativa</a></th>
+        <th><a href="#slide1">H265/HEVC</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Codificação com Perda</a></th>
+        <th><a href="#slide2">HEVC</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Motion Vector - H264</a></th>
+        <th><a href="#slide3">Principais diferenças</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Motion Vector - H265</a></th>
+        <th><a href="#slide4">Partição</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Diferenças</a></th>
+        <th><a href="#slide5">Partição</a></th>
         <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Transformação</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Predição Intra</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Predição Inter</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Comparação VP9/AVC/HEVC</a></th>
+        <td><a href="#slide9">9</a></td>
       </tr>
       
       

@@ -1,6 +1,10 @@
+# H265/HEVC
+
+----
+
 # HEVC
 
-![HEVC](/pictures/HEVC.png "HEVC")
+![HEVC](pictures/HEVC.png "HEVC")
 
 * Basicamente o HEVC irá funcionar como outros codificadores de vídeo.
 * As principais mudanças que fizeram com que o HEVC se torna-se um ótimo codificador serão destacadas em nossa apresentação.
@@ -9,7 +13,7 @@
 
 # Principais diferenças
 
-* Motion Compensated Prediction 16×16→64×6.
+* Motion Compensated Prediction 16×16→64×64.
 
 * Predição de blocos de tamanhos distintos, tendo blocos de tamanho residual até 32×32.
 
@@ -24,7 +28,7 @@
 
 # Partição
 
-![Coding Tree Block](/pictures/partition.png "Coding Tree Block")
+![Coding Tree Block](pictures/partition.png "Coding Tree Block")
 
 * O H.265 ampliou limite do macrobloco de 16x16 para 64x64
 
@@ -38,7 +42,7 @@ forma mais eficiente, enquanto as subdivisões de até 4x4 melhor codificam sina
 
 # Partição
 
-![Partição](/pictures/motion_vector2.jpg "Partição")
+![Partição](pictures/motion_vector2.png "Partição")
 
 # presenter notes
 
@@ -51,7 +55,16 @@ Podemos notar que nas regiões de maior detalhamento, como na boca e nas orelhas
  * Para a transformação de blocos pequenos foi visto que o uso de DST (Discrete Sine Transformation) tem um deesempenho superior ao DCT.
  * A matriz **H** é a matriz de transformação utilizada para os blocos 4x4 
 
-<img src="/pictures/DST.png" width="100%"/>
+<!-- <img src="pictures/DST.png" width="30%"/> -->
+<br><br><br>
+$$M=
+  \begin{bmatrix}
+    39 & 55 & 74 & 84 \newline
+    74 & 74 & 0 & -74 \newline
+    84 & -29 & -74 & 55 \newline
+    55 & -84 & 74 & -29
+  \end{bmatrix}
+ $$
 
 # presenter notes
  
@@ -61,7 +74,7 @@ A DST se ajusta melhor a frequências mais altas e por isso é preferível para 
 
 # Predição Intra
 
-![Intra Prediction](/pictures/1345537925_6877.png "Intra Prediction")
+![Intra Prediction](pictures/13455379256877.png "Intra Prediction")
 
 * A predição intra foi atualizada de 9 modos no AVC para 35 modos no HEVC.
 
@@ -83,7 +96,7 @@ A DST se ajusta melhor a frequências mais altas e por isso é preferível para 
  
 # Comparação VP9/AVC/HEVC
 
-<img src="/pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
+<img src="pictures/vp9-x264-x265-encoding-quality-1024x753.png" width="80%"/>
 
 * Podemos ver uma melhora significativa entre o x254(AVC) e o x265(HEVC)
 
