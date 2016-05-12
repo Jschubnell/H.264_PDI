@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>H265/HEVC</title>
+    <title>H.265/HEVC</title>
     <!-- Styles -->
     
     <link rel="stylesheet" media="print" href="theme/css/print.css">
@@ -61,7 +61,7 @@
         <div class="slide slide-1">
           <div class="inner">
             
-            <header><h1 id="h265hevc">H265/HEVC</h1></header>
+            <header><h1 id="h265hevc">H.265/HEVC</h1></header>
             
             
           </div>
@@ -123,7 +123,7 @@
         <div class="slide slide-3">
           <div class="inner">
             
-            <header><h1 id="principais-diferencas">Principais diferenças</h1></header>
+            <header><h1 id="principais-diferencas-com-h264">Principais diferenças com H.264</h1></header>
             
             
             <section><ul>
@@ -323,15 +323,24 @@ $$M=
             
             
             <section><ul>
-<li>No HEVC temos um novo modo de predição - Advanced MV.</li>
-</ul></section>
+<li>
+<p>No HEVC temos dois modos de predição :</p>
+<ul>
+<li>Merge.</li>
+<li>Advanced MV (<em>novo</em>).</li>
+</ul>
+</li>
+</ul>
+<p><img src="pictures/inter_pred_uni-bi.png" width="80%"/></p></section>
             
           </div>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
             <section>
             
-              <p>O Advanced MV cria uma lista de candidatos para os vetores de movimento usando um modelo porbabilístico mais complexo. Após a criação da lista os melhores candidatos são indexados com o MV Delta, o vetor com a diferença entre o movimento verdadeiro e a predição.</p>
+              <ul>
+<li>O Advanced MV cria uma lista de candidatos para os vetores de movimento usando um modelo porbabilístico mais complexo. Após a criação da lista os melhores candidatos são indexados com o MV Delta, o vetor com a diferença entre o movimento verdadeiro e a predição. O modo Merge é parecido, porém os candidatos são calculados com base nos index vizinhos.</li>
+</ul>
             
             </section>
           </div>
@@ -392,7 +401,7 @@ $$M=
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">H265/HEVC</a></th>
+        <th><a href="#slide1">H.265/HEVC</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
@@ -404,7 +413,7 @@ $$M=
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Principais diferenças</a></th>
+        <th><a href="#slide3">Principais diferenças com H.264</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       

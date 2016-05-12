@@ -1,4 +1,4 @@
-# H265/HEVC
+# H.265/HEVC
 
 ----
 
@@ -11,7 +11,7 @@
 
 ---
 
-# Principais diferenças
+# Principais diferenças com H.264
 
 * Motion Compensated Prediction 16×16→64×64.
 
@@ -86,11 +86,16 @@ A DST se ajusta melhor a frequências mais altas e por isso é preferível para 
  
 # Predição Inter
 
-* No HEVC temos um novo modo de predição - Advanced MV.
+* No HEVC temos dois modos de predição :
+
+	- Merge.
+	- Advanced MV (*novo*).
+
+<img src="pictures/inter_pred_uni-bi.png" width="80%"/>
 
 # presenter notes
 
- O Advanced MV cria uma lista de candidatos para os vetores de movimento usando um modelo porbabilístico mais complexo. Após a criação da lista os melhores candidatos são indexados com o MV Delta, o vetor com a diferença entre o movimento verdadeiro e a predição.
+ - O Advanced MV cria uma lista de candidatos para os vetores de movimento usando um modelo porbabilístico mais complexo. Após a criação da lista os melhores candidatos são indexados com o MV Delta, o vetor com a diferença entre o movimento verdadeiro e a predição. O modo Merge é parecido, porém os candidatos são calculados com base nos index vizinhos.
  
  ---
  
